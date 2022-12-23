@@ -1,0 +1,9 @@
+{
+  "name": "RocketTokens",
+  "version": "1.0.0",
+  "description": "Sistema de Design",
+  "main": "index.js",
+  "author": "Eduard",
+  "license": "MIT",
+  "private": true
+}
