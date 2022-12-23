@@ -1,9 +1,17 @@
 {
-  "name": "RocketTokens",
+  "name": "@rocket-ui/tokens",
   "version": "1.0.0",
   "description": "Sistema de Design",
   "main": "index.js",
   "author": "Eduard",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "build": "tsup src/index.ts -format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format ems,cjs --dts --watch"
+  },
+  "devDependencies": {
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4"
+  }
 }

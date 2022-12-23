@@ -1,0 +1,13 @@
+{
+  "name": "@rocket-ui/react",
+  "version": "1.0.0",
+  "description": "Projeto interno usando o Tokens",
+  "main": "index.js",
+  "author": "Eduard",
+  "license": "MIT",
+  "private": "true",
+  "devDependencies": {
+    "@rocket-ui/tokens": "*",
+    "typescript": "^4.9.4"
+  }
+}
