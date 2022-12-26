@@ -1,22 +1,28 @@
 {
-  "name": "@rocket-ui/react",
+  "name": "@learn-rocket-ui/react",
   "version": "1.0.0",
   "description": "Projeto interno usando o Tokens",
-  "main": "index.js",
   "author": "Eduard",
   "license": "MIT",
   "private": "true",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.tsx -format esm,cjs --dts",
-    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch"
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
+    "link": "eslint src/**/*.ts* --fix"
   },
   "devDependencies": {
-    "@rocket-ui/tokens": "*",
-    "@rocket-ui/ts-config": "*",
+    "@learn-rocket-ui/tokens": "*",
+    "@learn-rocket-ui/ts-config": "*",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@stitches/react": "^1.2.8"
   }
 }

@@ -1,6 +1,5 @@
 
-
-export * from "./colors";
+export { colors } from "./colors";
 export * from "./space";
 export * from "./radious";
 export * from "./fonts";
