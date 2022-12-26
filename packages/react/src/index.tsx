@@ -1,6 +1,11 @@
+import { styled } from '@stitches/react';
 import React from 'react';
-
+const Button = styled("button", {
+  fontFamily: '$default',
+  backgroundColor: "ActiveText",
+  height: "fit-content"
+})
 export function App() {
 
-  return <h1>Aplicativo criado</h1>
+  return <Button>Aplicativo criado</Button>
 }
