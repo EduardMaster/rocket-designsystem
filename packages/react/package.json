@@ -6,6 +6,10 @@
   "author": "Eduard",
   "license": "MIT",
   "private": "true",
+  "scripts": {
+    "build": "tsup src/index.tsx -format esm,cjs --dts",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch"
+  },
   "devDependencies": {
     "@rocket-ui/tokens": "*",
     "@rocket-ui/ts-config": "*",
@@ -14,9 +18,5 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.9.4"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   }
 }
