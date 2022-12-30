@@ -1,0 +1,6 @@
+{
+  "extends": "@learn-rocket-ui/ts-config/react.json",
+  "include": [
+    "src"
+  ]
+}

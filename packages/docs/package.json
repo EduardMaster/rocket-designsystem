@@ -20,7 +20,8 @@
   "dependencies": {
     "@learn-rocket-ui/react": "*",
     "@learn-rocket-ui/tokens": "*",
-    "@learn-rocket-ui/ts-config": "*"
+    "@learn-rocket-ui/ts-config": "*",
+    "polished": "^4.2.2"
   },
   "scripts": {
     "dev": "start-storybook -p 6006",
