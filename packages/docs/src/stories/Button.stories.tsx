@@ -4,7 +4,7 @@ import { Button, ButtonProps } from "@learn-rocket-ui/react";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Button do React',
+  title: 'Surfaces/Button',
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   args: {

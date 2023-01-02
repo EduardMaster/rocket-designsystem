@@ -37,8 +37,11 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.tsx
 var src_exports = {};
 __export(src_exports, {
-  App: () => App,
-  Button: () => Button
+  Box: () => Box,
+  Button: () => Button,
+  Heading: () => Heading,
+  StyledButton: () => StyledButton,
+  Text: () => Text
 });
 module.exports = __toCommonJS(src_exports);
 
@@ -174,13 +177,69 @@ function Button(props) {
   return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StyledButton, { children: (_a = props.label) != null ? _a : props.children });
 }
 
-// src/index.tsx
-var import_jsx_runtime2 = require("react/jsx-runtime");
-function App() {
-  return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Button, { children: "Aplicativo criado" });
-}
+// src/components/Box.tsx
+var Box = styled("div", {
+  padding: "$4",
+  borderRadius: "$md",
+  backgroundColor: "$gray800",
+  border: "1px solid $gray600"
+});
+
+// src/components/Text.tsx
+var Text = styled("p", {
+  fontFamily: "$default",
+  lineHeight: "$base",
+  margin: 0,
+  color: "$gray100",
+  variants: {
+    size: {
+      xxs: { fontSize: "$xxs" },
+      xs: { fontSize: "$xs" },
+      sm: { fontSize: "$sm" },
+      md: { fontSize: "$md" },
+      lg: { fontSize: "$lg" },
+      xl: { fontSize: "$xl" },
+      "2xl": { fontSize: "$2xl" },
+      "4xl": { fontSize: "$4xl" },
+      "5xl": { fontSize: "$5xl" },
+      "6xl": { fontSize: "$6xl" },
+      "7xl": { fontSize: "$7xl" },
+      "8xl": { fontSize: "$8xl" },
+      "9xl": { fontSize: "$9xl" }
+    }
+  },
+  defaultVariants: {
+    size: "md"
+  }
+});
+
+// src/components/Heading.tsx
+var Heading = styled("p", {
+  fontFamily: "$default",
+  lineHeight: "$base",
+  margin: 0,
+  color: "$gray100",
+  variants: {
+    size: {
+      sm: { fontSize: "$xl" },
+      md: { fontSize: "$2xl" },
+      lg: { fontSize: "$4xl" },
+      xl: { fontSize: "$5xl" },
+      "2xl": { fontSize: "$6xl" },
+      "4xl": { fontSize: "$7xl" },
+      "5xl": { fontSize: "$8xl" },
+      "6xl": { fontSize: "$9xl" }
+    }
+  },
+  defaultVariants: {
+    size: "md"
+  }
+});
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  App,
-  Button
+  Box,
+  Button,
+  Heading,
+  StyledButton,
+  Text
 });
