@@ -4,7 +4,7 @@ import { Text, TextProps } from "@learn-rocket-ui/react";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Surfaces/Text',
+  title: 'Typography/Text',
   component: Text,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   args: {

@@ -1,10 +1,12 @@
 "use strict";
+var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __defProps = Object.defineProperties;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __propIsEnum = Object.prototype.propertyIsEnumerable;
 var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
@@ -32,16 +34,28 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // src/index.tsx
 var src_exports = {};
 __export(src_exports, {
+  Avatar: () => Avatar,
+  AvatarContainer: () => AvatarContainer,
+  AvatarFallback: () => AvatarFallback,
+  AvatarImage: () => AvatarImage,
   Box: () => Box,
   Button: () => Button,
   Heading: () => Heading,
   StyledButton: () => StyledButton,
-  Text: () => Text
+  Text: () => Text,
+  TextInput: () => TextInput,
+  TextInputContainer: () => TextInputContainer,
+  TextInputData: () => TextInputData,
+  TextInputPrefix: () => TextInputPrefix
 });
 module.exports = __toCommonJS(src_exports);
 
@@ -150,31 +164,75 @@ var {
 // src/components/Button.tsx
 var import_jsx_runtime = require("react/jsx-runtime");
 var StyledButton = styled("button", {
-  fontFamily: "$default",
-  backgroundColor: "$main300",
+  all: "unset",
   borderRadius: "$sm",
-  border: 0,
+  fontSize: "$sm",
   fontWeight: "bold",
-  color: "White",
+  fontFamily: "$default",
+  textAlign: "center",
+  minWidth: 120,
+  boxSizing: "border-box",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  cursor: "pointer",
+  svg: {
+    width: "$6",
+    height: "$6"
+  },
   variants: {
+    variant: {
+      primary: {
+        color: "$white",
+        background: "$main500",
+        "&:not(:disabled):hover": {
+          background: "$main300"
+        },
+        "&:disabled": {
+          background: "$gray200"
+        }
+      },
+      secondary: {
+        color: "$main300",
+        border: "2px solid $main500",
+        "&:not(:disabled):hover": {
+          background: "$main500",
+          color: "$white"
+        },
+        "&:disabled": {
+          color: "$gray200",
+          borderColor: "$gray200"
+        }
+      },
+      tertiary: {
+        color: "$gray100",
+        "&:not(:disabled):hover": {
+          color: "$white"
+        },
+        "&:disabled": {
+          color: "$gray600"
+        }
+      }
+    },
     size: {
-      small: {
-        fontSize: 14,
+      md: {
+        height: 46,
         padding: "$2 $4"
       },
       big: {
-        fontSize: 14,
+        height: 80,
         padding: "$3 $6"
       }
     }
   },
   defaultVariants: {
-    size: "small"
+    size: "md",
+    variant: "primary"
   }
 });
 function Button(props) {
   var _a;
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StyledButton, { children: (_a = props.label) != null ? _a : props.children });
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StyledButton, __spreadProps(__spreadValues({}, props), { children: (_a = props.label) != null ? _a : props.children }));
 }
 
 // src/components/Box.tsx
@@ -235,11 +293,104 @@ var Heading = styled("p", {
     size: "md"
   }
 });
+
+// src/components/Avatar.tsx
+var import_phosphor_react = require("phosphor-react");
+var AvatarRadix = __toESM(require("@radix-ui/react-avatar"));
+var import_jsx_runtime2 = require("react/jsx-runtime");
+var AvatarContainer = styled(AvatarRadix.Root, {
+  borderRadius: "$full",
+  display: "inline-block",
+  width: "$12",
+  height: "$12",
+  overflow: "hidden"
+});
+var AvatarImage = styled(AvatarRadix.Image, {
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  borderRadius: "inherit"
+});
+var AvatarFallback = styled(AvatarRadix.Fallback, {
+  padding: "$4",
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: "$gray600",
+  color: "$gray800",
+  svg: {
+    width: "$6",
+    height: "$6"
+  }
+});
+function Avatar(props) {
+  return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(AvatarContainer, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(AvatarImage, __spreadValues({}, props)),
+    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_phosphor_react.User, {}) })
+  ] });
+}
+
+// src/components/TextInput.tsx
+var import_jsx_runtime3 = require("react/jsx-runtime");
+var TextInputContainer = styled("div", {
+  backgroundColor: "$gray900",
+  padding: "$3 $4",
+  borderRadius: "$sm",
+  boxSizing: "border-box",
+  border: "2px solid $gray900",
+  display: "flex",
+  alignItems: "baseline",
+  "&:has(input:focus)": {
+    borderColor: "$main300"
+  },
+  "&:has(input:disabled)": {
+    opacity: 0.5,
+    cursor: "not-allowed"
+  }
+});
+var TextInputPrefix = styled("span", {
+  fontFamily: "$default",
+  fontSize: "$sm",
+  color: "$gray400",
+  fontWeight: "$regular"
+});
+var TextInputData = styled("input", {
+  fontFamily: "$default",
+  fontSize: "$sm",
+  color: "$white",
+  fontWeight: "$regular",
+  background: "transparent",
+  "&:focus": {
+    outline: 0
+  },
+  "&:disabled": {
+    cursor: "not-allowed"
+  },
+  "&:placeholder ": {
+    color: "$gray400"
+  }
+});
+function TextInput(props) {
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(TextInputContainer, { children: [
+    props.prefix && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(TextInputPrefix, { children: props.prefix }),
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(TextInputData, __spreadValues({}, props))
+  ] });
+}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  Avatar,
+  AvatarContainer,
+  AvatarFallback,
+  AvatarImage,
   Box,
   Button,
   Heading,
   StyledButton,
-  Text
+  Text,
+  TextInput,
+  TextInputContainer,
+  TextInputData,
+  TextInputPrefix
 });

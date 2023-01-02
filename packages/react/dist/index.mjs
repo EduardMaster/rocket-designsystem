@@ -123,31 +123,75 @@ var {
 // src/components/Button.tsx
 import { jsx } from "react/jsx-runtime";
 var StyledButton = styled("button", {
-  fontFamily: "$default",
-  backgroundColor: "$main300",
+  all: "unset",
   borderRadius: "$sm",
-  border: 0,
+  fontSize: "$sm",
   fontWeight: "bold",
-  color: "White",
+  fontFamily: "$default",
+  textAlign: "center",
+  minWidth: 120,
+  boxSizing: "border-box",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  cursor: "pointer",
+  svg: {
+    width: "$6",
+    height: "$6"
+  },
   variants: {
+    variant: {
+      primary: {
+        color: "$white",
+        background: "$main500",
+        "&:not(:disabled):hover": {
+          background: "$main300"
+        },
+        "&:disabled": {
+          background: "$gray200"
+        }
+      },
+      secondary: {
+        color: "$main300",
+        border: "2px solid $main500",
+        "&:not(:disabled):hover": {
+          background: "$main500",
+          color: "$white"
+        },
+        "&:disabled": {
+          color: "$gray200",
+          borderColor: "$gray200"
+        }
+      },
+      tertiary: {
+        color: "$gray100",
+        "&:not(:disabled):hover": {
+          color: "$white"
+        },
+        "&:disabled": {
+          color: "$gray600"
+        }
+      }
+    },
     size: {
-      small: {
-        fontSize: 14,
+      md: {
+        height: 46,
         padding: "$2 $4"
       },
       big: {
-        fontSize: 14,
+        height: 80,
         padding: "$3 $6"
       }
     }
   },
   defaultVariants: {
-    size: "small"
+    size: "md",
+    variant: "primary"
   }
 });
 function Button(props) {
   var _a;
-  return /* @__PURE__ */ jsx(StyledButton, { children: (_a = props.label) != null ? _a : props.children });
+  return /* @__PURE__ */ jsx(StyledButton, __spreadProps(__spreadValues({}, props), { children: (_a = props.label) != null ? _a : props.children }));
 }
 
 // src/components/Box.tsx
@@ -208,10 +252,103 @@ var Heading = styled("p", {
     size: "md"
   }
 });
+
+// src/components/Avatar.tsx
+import { User } from "phosphor-react";
+import * as AvatarRadix from "@radix-ui/react-avatar";
+import { jsx as jsx2, jsxs } from "react/jsx-runtime";
+var AvatarContainer = styled(AvatarRadix.Root, {
+  borderRadius: "$full",
+  display: "inline-block",
+  width: "$12",
+  height: "$12",
+  overflow: "hidden"
+});
+var AvatarImage = styled(AvatarRadix.Image, {
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  borderRadius: "inherit"
+});
+var AvatarFallback = styled(AvatarRadix.Fallback, {
+  padding: "$4",
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: "$gray600",
+  color: "$gray800",
+  svg: {
+    width: "$6",
+    height: "$6"
+  }
+});
+function Avatar(props) {
+  return /* @__PURE__ */ jsxs(AvatarContainer, { children: [
+    /* @__PURE__ */ jsx2(AvatarImage, __spreadValues({}, props)),
+    /* @__PURE__ */ jsx2(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ jsx2(User, {}) })
+  ] });
+}
+
+// src/components/TextInput.tsx
+import { jsx as jsx3, jsxs as jsxs2 } from "react/jsx-runtime";
+var TextInputContainer = styled("div", {
+  backgroundColor: "$gray900",
+  padding: "$3 $4",
+  borderRadius: "$sm",
+  boxSizing: "border-box",
+  border: "2px solid $gray900",
+  display: "flex",
+  alignItems: "baseline",
+  "&:has(input:focus)": {
+    borderColor: "$main300"
+  },
+  "&:has(input:disabled)": {
+    opacity: 0.5,
+    cursor: "not-allowed"
+  }
+});
+var TextInputPrefix = styled("span", {
+  fontFamily: "$default",
+  fontSize: "$sm",
+  color: "$gray400",
+  fontWeight: "$regular"
+});
+var TextInputData = styled("input", {
+  fontFamily: "$default",
+  fontSize: "$sm",
+  color: "$white",
+  fontWeight: "$regular",
+  background: "transparent",
+  "&:focus": {
+    outline: 0
+  },
+  "&:disabled": {
+    cursor: "not-allowed"
+  },
+  "&:placeholder ": {
+    color: "$gray400"
+  }
+});
+function TextInput(props) {
+  return /* @__PURE__ */ jsxs2(TextInputContainer, { children: [
+    props.prefix && /* @__PURE__ */ jsx3(TextInputPrefix, { children: props.prefix }),
+    /* @__PURE__ */ jsx3(TextInputData, __spreadValues({}, props))
+  ] });
+}
 export {
+  Avatar,
+  AvatarContainer,
+  AvatarFallback,
+  AvatarImage,
   Box,
   Button,
   Heading,
   StyledButton,
-  Text
+  Text,
+  TextInput,
+  TextInputContainer,
+  TextInputData,
+  TextInputPrefix
 };

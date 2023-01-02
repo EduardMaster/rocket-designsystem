@@ -4,7 +4,7 @@ import { Heading, HeadingProps } from "@learn-rocket-ui/react";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Surfaces/Heading',
+  title: 'Typography/Heading',
   component: Heading,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   args: {

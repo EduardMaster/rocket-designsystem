@@ -4,28 +4,33 @@ import { Button, ButtonProps } from "@learn-rocket-ui/react";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Surfaces/Button',
+  title: 'Form/Button',
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   args: {
+
     children: "Enviar"
   }
 } as Meta<ButtonProps>;
 
 export const Primary: StoryObj<ButtonProps> = {}
-export const Small: StoryObj<ButtonProps> = {
+export const Secondary: StoryObj<ButtonProps> = {
   args:
   {
-    size: "small"
+    variant: "secondary"
   }
 }
-export const Big: StoryObj<ButtonProps> = {
-  args: {
-    size: "big"
-
+export const Tertiary: StoryObj<ButtonProps> = {
+  args:
+  {
+    variant: "tertiary"
   }
 }
-export const Secondary: StoryObj<ButtonProps> = {}
-export const Large: StoryObj<ButtonProps> = {}
+export const Disabled: StoryObj<ButtonProps> = {
+  args:
+  {
+    disabled: true
+  }
+}
 
 
