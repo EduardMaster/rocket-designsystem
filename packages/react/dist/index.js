@@ -53,6 +53,11 @@ __export(src_exports, {
   CheckboxContainer: () => CheckboxContainer,
   CheckboxIndicator: () => CheckboxIndicator,
   Heading: () => Heading,
+  Label: () => Label,
+  MultiStep: () => MultiStep,
+  MultiStepContainer: () => MultiStepContainer,
+  Step: () => Step,
+  Steps: () => Steps,
   StyledButton: () => StyledButton,
   Text: () => Text,
   TextArea: () => TextArea,
@@ -464,6 +469,47 @@ var CheckboxIndicator = styled(CheckboxLib.Indicator, {
 function Checkbox(props) {
   return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_phosphor_react2.Check, { weight: "bold" }) }) }));
 }
+
+// src/components/MultiStep.tsx
+var import_jsx_runtime5 = require("react/jsx-runtime");
+var MultiStepContainer = styled("div", {});
+var Label = styled(Text, {
+  color: "$gray200",
+  defaultVariants: {
+    size: "xs"
+  }
+});
+var Steps = styled("div", {
+  display: "grid",
+  gridTemplateColumns: "repeat(var(--steps-size), 1fr)",
+  gap: "$2",
+  marginTop: "$1"
+});
+var Step = styled("div", {
+  height: "$1",
+  borderRadius: "$px",
+  backgroundColor: "$gray600",
+  variants: {
+    active: {
+      true: {
+        backgroundColor: "$gray100"
+      }
+    }
+  }
+});
+function MultiStep({ size, currentStep = 1 }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(MultiStepContainer, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(Label, { children: [
+      "Passo ",
+      currentStep,
+      " de ",
+      size
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Step, { active: currentStep >= step }, step);
+    }) })
+  ] });
+}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -476,6 +522,11 @@ function Checkbox(props) {
   CheckboxContainer,
   CheckboxIndicator,
   Heading,
+  Label,
+  MultiStep,
+  MultiStepContainer,
+  Step,
+  Steps,
   StyledButton,
   Text,
   TextArea,
