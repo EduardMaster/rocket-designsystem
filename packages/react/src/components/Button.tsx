@@ -77,3 +77,4 @@ export type ButtonProps = ComponentProps<typeof StyledButton> & {
 export function Button(props: ButtonProps) {
   return <StyledButton {...props}>{props.label ?? props.children}</StyledButton>
 }
+StyledButton.displayName = "Button"

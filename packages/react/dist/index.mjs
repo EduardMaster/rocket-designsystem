@@ -193,6 +193,7 @@ function Button(props) {
   var _a;
   return /* @__PURE__ */ jsx(StyledButton, __spreadProps(__spreadValues({}, props), { children: (_a = props.label) != null ? _a : props.children }));
 }
+StyledButton.displayName = "Button";
 
 // src/components/Box.tsx
 var Box = styled("div", {
@@ -201,6 +202,7 @@ var Box = styled("div", {
   backgroundColor: "$gray800",
   border: "1px solid $gray600"
 });
+Box.displayName = "Box";
 
 // src/components/Text.tsx
 var Text = styled("p", {
@@ -229,6 +231,7 @@ var Text = styled("p", {
     size: "md"
   }
 });
+Text.displayName = "Text";
 
 // src/components/Heading.tsx
 var Heading = styled("p", {
@@ -252,6 +255,7 @@ var Heading = styled("p", {
     size: "md"
   }
 });
+Heading.displayName = "Heading";
 
 // src/components/Avatar.tsx
 import { User } from "phosphor-react";
@@ -290,6 +294,7 @@ function Avatar(props) {
     /* @__PURE__ */ jsx2(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ jsx2(User, {}) })
   ] });
 }
+AvatarImage.displayName = "Avatar";
 
 // src/components/TextInput.tsx
 import { jsx as jsx3, jsxs as jsxs2 } from "react/jsx-runtime";
@@ -337,6 +342,7 @@ function TextInput(props) {
     /* @__PURE__ */ jsx3(TextInputData, __spreadValues({}, props))
   ] });
 }
+TextInputData.displayName = "TextInput";
 
 // src/components/TextArea.tsx
 var TextArea = styled("textarea", {
@@ -363,6 +369,7 @@ var TextArea = styled("textarea", {
     color: "$gray400"
   }
 });
+TextArea.displayName = "TextArea";
 
 // src/components/Checkbox.tsx
 import * as CheckboxLib from "@radix-ui/react-checkbox";
@@ -419,6 +426,7 @@ var CheckboxIndicator = styled(CheckboxLib.Indicator, {
 function Checkbox(props) {
   return /* @__PURE__ */ jsx4(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx4(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ jsx4(Check, { weight: "bold" }) }) }));
 }
+CheckboxContainer.displayName = "Checkbox";
 
 // src/components/MultiStep.tsx
 import { jsx as jsx5, jsxs as jsxs3 } from "react/jsx-runtime";
@@ -429,6 +437,7 @@ var Label = styled(Text, {
     size: "xs"
   }
 });
+Label.displayName = "Label";
 var Steps = styled("div", {
   display: "grid",
   gridTemplateColumns: "repeat(var(--steps-size), 1fr)",
@@ -460,6 +469,7 @@ function MultiStep({ size, currentStep = 1 }) {
     }) })
   ] });
 }
+MultiStepContainer.displayName = "MultiStep";
 export {
   Avatar,
   AvatarContainer,

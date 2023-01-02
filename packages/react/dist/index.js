@@ -243,6 +243,7 @@ function Button(props) {
   var _a;
   return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StyledButton, __spreadProps(__spreadValues({}, props), { children: (_a = props.label) != null ? _a : props.children }));
 }
+StyledButton.displayName = "Button";
 
 // src/components/Box.tsx
 var Box = styled("div", {
@@ -251,6 +252,7 @@ var Box = styled("div", {
   backgroundColor: "$gray800",
   border: "1px solid $gray600"
 });
+Box.displayName = "Box";
 
 // src/components/Text.tsx
 var Text = styled("p", {
@@ -279,6 +281,7 @@ var Text = styled("p", {
     size: "md"
   }
 });
+Text.displayName = "Text";
 
 // src/components/Heading.tsx
 var Heading = styled("p", {
@@ -302,6 +305,7 @@ var Heading = styled("p", {
     size: "md"
   }
 });
+Heading.displayName = "Heading";
 
 // src/components/Avatar.tsx
 var import_phosphor_react = require("phosphor-react");
@@ -340,6 +344,7 @@ function Avatar(props) {
     /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_phosphor_react.User, {}) })
   ] });
 }
+AvatarImage.displayName = "Avatar";
 
 // src/components/TextInput.tsx
 var import_jsx_runtime3 = require("react/jsx-runtime");
@@ -387,6 +392,7 @@ function TextInput(props) {
     /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(TextInputData, __spreadValues({}, props))
   ] });
 }
+TextInputData.displayName = "TextInput";
 
 // src/components/TextArea.tsx
 var TextArea = styled("textarea", {
@@ -413,6 +419,7 @@ var TextArea = styled("textarea", {
     color: "$gray400"
   }
 });
+TextArea.displayName = "TextArea";
 
 // src/components/Checkbox.tsx
 var CheckboxLib = __toESM(require("@radix-ui/react-checkbox"));
@@ -469,6 +476,7 @@ var CheckboxIndicator = styled(CheckboxLib.Indicator, {
 function Checkbox(props) {
   return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_phosphor_react2.Check, { weight: "bold" }) }) }));
 }
+CheckboxContainer.displayName = "Checkbox";
 
 // src/components/MultiStep.tsx
 var import_jsx_runtime5 = require("react/jsx-runtime");
@@ -479,6 +487,7 @@ var Label = styled(Text, {
     size: "xs"
   }
 });
+Label.displayName = "Label";
 var Steps = styled("div", {
   display: "grid",
   gridTemplateColumns: "repeat(var(--steps-size), 1fr)",
@@ -510,6 +519,7 @@ function MultiStep({ size, currentStep = 1 }) {
     }) })
   ] });
 }
+MultiStepContainer.displayName = "MultiStep";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,

@@ -9,6 +9,7 @@ export const Label = styled(Text, {
     size: 'xs',
   },
 })
+Label.displayName = "Label"
 
 export const Steps = styled('div', {
   display: 'grid',
@@ -51,3 +52,4 @@ export function MultiStep({ size, currentStep = 1 }: MultiStepProps) {
     </MultiStepContainer>
   )
 }
+MultiStepContainer.displayName = "MultiStep"
