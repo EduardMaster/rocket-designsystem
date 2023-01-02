@@ -1,11 +1,11 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react'
-import { TextInputProps, TextInput, Box, Text } from "@learn-rocket-ui/react";
+import { TextAreaProps, TextArea, Box, Text } from "@learn-rocket-ui/react";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Form/Text Input',
-  component: TextInput,
+  title: 'Form/Text Area',
+  component: TextArea,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   decorators: [(Story) => {
     return (<Box as="label" css={{
@@ -13,29 +13,23 @@ export default {
       flexDirection: "column",
       gap: "$2"
     }}>
-      <Text size="sm">Github user</Text>
+      <Text size="sm">Observations</Text>
       {Story()}
     </Box>)
   }],
   args: {
 
   }
-} as Meta<TextInputProps>;
+} as Meta<TextAreaProps>;
 
-export const Primary: StoryObj<TextInputProps> = {
+export const Primary: StoryObj<TextAreaProps> = {
   args: {
-    placeholder: "Type your github name"
+    placeholder: "Type your biography"
   }
 }
-export const Disabled: StoryObj<TextInputProps> = {
+export const Disabled: StoryObj<TextAreaProps> = {
 
   args: {
     disabled: true
-  }
-}
-export const WithPrefix: StoryObj<TextInputProps> = {
-
-  args: {
-    prefix: "https://github.com/"
   }
 }

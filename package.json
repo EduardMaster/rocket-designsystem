@@ -2,5 +2,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "start-react": "cd packages/react & yarn dev",
+    "start-docs": "cd packages/react & yarn dev"
+  },
   "private": "true"
 }
