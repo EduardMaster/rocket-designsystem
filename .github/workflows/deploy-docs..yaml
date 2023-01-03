@@ -16,11 +16,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      working-directory: ./packages/docs
+        working-directory: ./packages/docs
       - run: yarn install --immutable --immutable-cache --check-cache
-
       - run: yarn build-storybook
-
       - name: Deploy storybook
         
         run: yarn storybook-deploy -- --ci --existing-output-dir=storybook-static
