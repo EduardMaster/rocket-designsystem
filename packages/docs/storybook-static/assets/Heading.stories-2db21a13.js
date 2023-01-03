@@ -1,0 +1,2 @@
+import{H as r}from"./index-66b262e6.js";import"./index-34e51894.js";import"./es.object.get-own-property-descriptor-64192e07.js";import"./jsx-runtime-da4cfb3b.js";import"./index-75cd1920.js";const i={title:"Typography/Heading",component:r,args:{children:"Titulo padrão"}},n={},p={args:{children:"Titulo Forte",as:"strong"},parameters:{docs:{description:{story:"Por padrão o heading sempre será h2"}}}},m=["Primary","CustomTag"];export{p as CustomTag,n as Primary,m as __namedExportsOrder,i as default};
+//# sourceMappingURL=Heading.stories-2db21a13.js.map

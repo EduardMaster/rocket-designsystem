@@ -1,0 +1,2 @@
+import{A as t}from"./index-66b262e6.js";import"./index-34e51894.js";import"./es.object.get-own-property-descriptor-64192e07.js";import"./jsx-runtime-da4cfb3b.js";import"./index-75cd1920.js";const m={title:"Data display/Avatar",component:t,args:{src:"https://github.com/EduardMaster.png",alt:"Eduard no Git"}},p={},c={args:{src:void 0}},d=["Primary","WithFallback"];export{p as Primary,c as WithFallback,d as __namedExportsOrder,m as default};
+//# sourceMappingURL=Avatar.stories-a1d14b1a.js.map
