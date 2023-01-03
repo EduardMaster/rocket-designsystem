@@ -12,17 +12,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Making all Modifications
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Install StoryBook libs
         working-directory: ./packages/docs
-      - run: yarn install --immutable --immutable-cache --check-cache
-      - name: Storybook Build
-      - run: yarn build-storybook
-      - name: Deploy storybook
-        
+        run: yarn install --immutable --immutable-cache --check-cache
+        run: yarn build-storybook
         run: yarn storybook-deploy -- --ci --existing-output-dir=storybook-static
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
