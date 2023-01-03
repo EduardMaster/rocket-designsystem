@@ -3,8 +3,17 @@
     "packages/*"
   ],
   "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=packages/docs && changeset publish",
     "start-react": "cd packages/react & yarn dev",
     "start-docs": "cd packages/react & yarn dev"
   },
-  "private": "true"
+  "private": "true",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "turbo": "^1.6.3"
+  }
 }
