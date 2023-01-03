@@ -28,6 +28,6 @@
     "dev": "start-storybook -p 6006",
     "build": "build-storybook",
     "deploy": "storybook-to-ghpages",
-    "ci": "yarn install --immutable --immutable-cache --check-cache"
+    "upload": "yarn install --immutable --immutable-cache --check-cache"
   }
 }
