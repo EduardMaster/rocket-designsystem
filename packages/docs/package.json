@@ -27,7 +27,6 @@
   "scripts": {
     "dev": "start-storybook -p 6006",
     "build": "build-storybook",
-    "deploy": "storybook-to-ghpages",
-    "upload": "yarn install --immutable --immutable-cache --check-cache"
+    "deploy": "storybook-to-ghpages"
   }
 }

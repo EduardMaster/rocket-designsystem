@@ -19,7 +19,7 @@ jobs:
 
       - run: yarn upload
 
-      - run: yarn build
+      - run: yarn install --immutable --immutable-cache --check-cache
 
       - name: Deploy storybook
         working-directory: ./packages/docs
