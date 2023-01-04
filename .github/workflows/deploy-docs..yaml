@@ -16,6 +16,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: '**/package-lock.json'
 
       - name: Installing depedencies  
         run: yarn install --immutable --immutable-cache --check-cache
@@ -23,6 +25,9 @@ jobs:
       - name: Building
         working-directory: ./packages/docs
         run: yarn build
+        env:
+          TURBO_TOKEN: FJfjUItKdOzAGsKfk2FUpS9D
+          TURBO_TEAM: eduard
 
       - name: Deploy storybook
         working-directory: ./packages/docs
