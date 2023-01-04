@@ -1,0 +1,79 @@
+
+> docs@1.0.0 build
+> build-storybook
+
+info @storybook/react v6.5.15
+info 
+info => Cleaning outputDir: E:\Tudo\react-native\rocket-designsystem\packages\docs\storybook-static
+info => Loading presets
+info Found existing addon "@storybook/addon-docs", skipping.
+info => Loading custom manager config
+info => Compiling manager..
+info => Loading custom manager config
+
+attention => Storybook now collects completely anonymous telemetry regarding usage.
+This information is used to shape Storybook's roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://storybook.js.org/telemetry
+
+[36mvite v4.0.3 [32mbuilding for production...[36m[39m
+transforming...
+info => Manager built (59 s)
+Use of eval in "../../node_modules/telejson/dist/esm/index.js" is strongly discouraged as it poses security risks and may cause issues with minification.
+Use of eval in "../../node_modules/telejson/dist/esm/index.js" is strongly discouraged as it poses security risks and may cause issues with minification.
+Use of eval in "../../node_modules/@storybook/components/dist/esm/index-681e4b07.js" is strongly discouraged as it poses security risks and may cause issues with minification.
+[32m✓[39m 2510 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mstorybook-static/[22m[32miframe.html                                               [39m[1m[2m 14.26 kB[22m[1m[22m
+[2mstorybook-static/[22m[2massets/[22m[36mes.number.is-nan-86ed581b.js                       [39m[1m[2m  0.29 kB[22m[1m[22m[2m │ gzip:   0.25 kB[22m[2m │ map:     0.62 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mstring-d2fe5096.js                                 [39m[1m[2m  0.29 kB[22m[1m[22m[2m │ gzip:   0.24 kB[22m[2m │ map:     0.60 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mes.map.constructor-3edf4002.js                     [39m[1m[2m  0.33 kB[22m[1m[22m[2m │ gzip:   0.27 kB[22m[2m │ map:     0.76 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mBox.stories-a6e0f7b4.js                            [39m[1m[2m  0.37 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m[2m │ map:     0.10 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mpreview-9b85ec6f.js                                [39m[1m[2m  0.42 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m[2m │ map:     0.56 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mText.stories-52dc00ff.js                           [39m[1m[2m  0.47 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m[2m │ map:     0.11 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mAvatar.stories-30e8c055.js                         [39m[1m[2m  0.50 kB[22m[1m[22m[2m │ gzip:   0.35 kB[22m[2m │ map:     0.11 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mButton.stories-260a3a49.js                         [39m[1m[2m  0.55 kB[22m[1m[22m[2m │ gzip:   0.35 kB[22m[2m │ map:     0.11 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mHeading.stories-bf1c2cb3.js                        [39m[1m[2m  0.56 kB[22m[1m[22m[2m │ gzip:   0.38 kB[22m[2m │ map:     0.11 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mCheckbox.stories-01f417b4.js                       [39m[1m[2m  0.56 kB[22m[1m[22m[2m │ gzip:   0.39 kB[22m[2m │ map:     0.11 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mMultiStep.stories-c27fa48f.js                      [39m[1m[2m  0.57 kB[22m[1m[22m[2m │ gzip:   0.39 kB[22m[2m │ map:     0.11 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mes.string.from-code-point-edcf6da2.js              [39m[1m[2m  0.62 kB[22m[1m[22m[2m │ gzip:   0.46 kB[22m[2m │ map:     2.18 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mTextArea.stories-12768922.js                       [39m[1m[2m  0.64 kB[22m[1m[22m[2m │ gzip:   0.44 kB[22m[2m │ map:     0.11 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mTextInput.stories-db573799.js                      [39m[1m[2m  0.71 kB[22m[1m[22m[2m │ gzip:   0.48 kB[22m[2m │ map:     0.11 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mclient-d08213a4.js                                 [39m[1m[2m  0.72 kB[22m[1m[22m[2m │ gzip:   0.46 kB[22m[2m │ map:     0.91 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mes.regexp.flags-d3e95a90.js                        [39m[1m[2m  0.75 kB[22m[1m[22m[2m │ gzip:   0.51 kB[22m[2m │ map:     2.75 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mmake-decorator-6f43e346.js                         [39m[1m[2m  0.94 kB[22m[1m[22m[2m │ gzip:   0.56 kB[22m[2m │ map:     3.06 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mpreview-1109061a.js                                [39m[1m[2m  1.00 kB[22m[1m[22m[2m │ gzip:   0.61 kB[22m[2m │ map:     7.44 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mjsx-runtime-da4cfb3b.js                            [39m[1m[2m  1.15 kB[22m[1m[22m[2m │ gzip:   0.71 kB[22m[2m │ map:     2.18 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mes.number.is-integer-f318ecfa.js                   [39m[1m[2m  1.63 kB[22m[1m[22m[2m │ gzip:   0.94 kB[22m[2m │ map:     8.63 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mes.number.to-fixed-163615ad.js                     [39m[1m[2m  1.78 kB[22m[1m[22m[2m │ gzip:   1.09 kB[22m[2m │ map:     8.20 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mpreview-924fd6ab.js                                [39m[1m[2m  2.39 kB[22m[1m[22m[2m │ gzip:   0.82 kB[22m[2m │ map:     4.29 kB[22m
+[33m
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/guide/en/#outputmanualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+info => Output directory: E:\Tudo\react-native\rocket-designsystem\packages\docs\storybook-static
+[2mstorybook-static/[22m[2massets/[22m[36mrenderDocs-d8ddf8b4.js                             [39m[1m[2m  2.83 kB[22m[1m[22m[2m │ gzip:   1.40 kB[22m[2m │ map:     9.77 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mpreview-58727010.js                                [39m[1m[2m  4.78 kB[22m[1m[22m[2m │ gzip:   1.88 kB[22m[2m │ map:    17.19 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mconfig-91985880.js                                 [39m[1m[2m  6.10 kB[22m[1m[22m[2m │ gzip:   2.45 kB[22m[2m │ map:    20.74 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mindex-34e51894.js                                  [39m[1m[2m  7.49 kB[22m[1m[22m[2m │ gzip:   3.09 kB[22m[2m │ map:    15.73 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mpreview-7863538e.js                                [39m[1m[2m  8.34 kB[22m[1m[22m[2m │ gzip:   1.81 kB[22m[2m │ map:    17.28 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mpreview-90cf40ec.js                                [39m[1m[2m  9.93 kB[22m[1m[22m[2m │ gzip:   3.52 kB[22m[2m │ map:    39.36 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mpreview-fbe788c8.js                                [39m[1m[2m 10.61 kB[22m[1m[22m[2m │ gzip:   4.13 kB[22m[2m │ map:    43.66 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mGlobalScrollAreaStyles-8793ce4a-40fa3907.js        [39m[1m[2m 10.68 kB[22m[1m[22m[2m │ gzip:   2.48 kB[22m[2m │ map:    20.88 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mpreview-a3d08aa4.js                                [39m[1m[2m 27.18 kB[22m[1m[22m[2m │ gzip:   8.62 kB[22m[2m │ map:   105.04 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mindex-0eae168d.js                                  [39m[1m[2m 30.75 kB[22m[1m[22m[2m │ gzip:  10.06 kB[22m[2m │ map:   133.35 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mColor-f953d088-c7efc598.js                         [39m[1m[2m 34.58 kB[22m[1m[22m[2m │ gzip:  13.13 kB[22m[2m │ map:   132.47 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mindex-a0df3c5f.js                                  [39m[1m[2m 38.29 kB[22m[1m[22m[2m │ gzip:  13.79 kB[22m[2m │ map:   139.78 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mWithTooltip-167e9982-795d818c.js                   [39m[1m[2m 41.30 kB[22m[1m[22m[2m │ gzip:  13.92 kB[22m[2m │ map:   180.49 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mes.object.get-own-property-descriptor-64192e07.js  [39m[1m[2m 60.88 kB[22m[1m[22m[2m │ gzip:  25.96 kB[22m[2m │ map:   329.36 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mindex-309eb24a.js                                  [39m[1m[2m 61.03 kB[22m[1m[22m[2m │ gzip:  22.32 kB[22m[2m │ map:   272.99 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mOverlayScrollbars-1355f44c-22fe4b56.js             [39m[1m[2m 64.84 kB[22m[1m[22m[2m │ gzip:  27.55 kB[22m[2m │ map:   440.44 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mweb.url.constructor-772845e2.js                    [39m[1m[2m 99.17 kB[22m[1m[22m[2m │ gzip:  37.66 kB[22m[2m │ map:   460.62 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36msyntaxhighlighter-b07b042a-cf8229a1.js             [39m[1m[2m117.48 kB[22m[1m[22m[2m │ gzip:  48.91 kB[22m[2m │ map:   466.18 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mindex-75cd1920.js                                  [39m[1m[2m138.60 kB[22m[1m[22m[2m │ gzip:  45.68 kB[22m[2m │ map:   334.99 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36miframe-07036748.js                                 [39m[1m[2m263.04 kB[22m[1m[22m[2m │ gzip:  70.82 kB[22m[2m │ map:   653.39 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mindex-681e4b07-e6305ccf.js                         [39m[1m[2m383.78 kB[22m[1m[22m[2m │ gzip: 114.38 kB[22m[2m │ map:   775.42 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mconfig-79a6ba8d.js                                 [39m[1m[2m402.26 kB[22m[1m[22m[2m │ gzip: 121.56 kB[22m[2m │ map: 1,409.29 kB[22m
+[2mstorybook-static/[22m[2massets/[22m[36mformatter-0d5cb0eb-5e322abf.js                     [39m[1m[33m742.51 kB[39m[22m[2m │ gzip: 239.87 kB[22m[2m │ map: 1,783.59 kB[22m

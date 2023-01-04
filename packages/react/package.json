@@ -4,7 +4,7 @@
   "description": "Projeto interno usando o Tokens",
   "author": "Eduard",
   "license": "MIT",
-  "private": "true",
+  "private": true,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
