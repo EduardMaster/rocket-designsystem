@@ -23,7 +23,6 @@ jobs:
         run: npm ci
 
       - name: Building
-        working-directory: ./packages/docs
         run: npm run build
         env:
           TURBO_TOKEN: FJfjUItKdOzAGsKfk2FUpS9D
