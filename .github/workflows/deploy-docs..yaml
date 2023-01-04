@@ -16,21 +16,21 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: 'yarn'
-          cache-dependency-path: '**/yarn.lock'
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
 
       - name: Installing depedencies  
-        run: yarn install --immutable --immutable-cache --check-cache
+        run: npm ci
 
       - name: Building
         working-directory: ./packages/docs
-        run: yarn build
+        run: npm run build
         env:
           TURBO_TOKEN: FJfjUItKdOzAGsKfk2FUpS9D
           TURBO_TEAM: eduard
 
       - name: Deploy storybook
         working-directory: ./packages/docs
-        run: yarn deploy-storybook -- --ci --existing-output-dir=storybook-static
+        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}

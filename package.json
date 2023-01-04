@@ -8,8 +8,8 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo run build --filter=packages/docs && changeset publish",
-    "start-react": "cd packages/react & yarn dev",
-    "start-docs": "cd packages/react & yarn dev"
+    "start-react": "cd packages/react & npm run dev",
+    "start-docs": "cd packages/react & npm run dev"
   },
   "private": "true",
   "devDependencies": {
